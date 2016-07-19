@@ -2,9 +2,9 @@
 
 #Perform git add, git commit with default message, and git push to argument
 #Use with the -c option to input custom commit message. Example: gitACP -c testing master
-BRANCH="$1"
-MESSAGE="default"
 
+MESSAGE="default"
+read -p "Enter branch name:" BRANCH
 while getopts ":c:" option; do
 	case $option in
 	  	c)
