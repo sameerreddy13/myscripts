@@ -1,4 +1,4 @@
-#!/bin/bash -e -x
+#!/bin/bash -e
 
 #Create remote Git repo from command line
 
