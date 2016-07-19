@@ -19,6 +19,7 @@ while getopts ":c" option; do
 done
 
 git add -A
+
 git commit -m "$MESSAGE"
 echo
 git push origin "$BRANCH"
