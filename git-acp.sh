@@ -6,6 +6,7 @@
 MESSAGE="default"
 read -p "Enter branch name:" BRANCH
 
+# handle option flags
 while getopts ":c:" option; do
 	case $option in
 	  	c)
@@ -19,12 +20,6 @@ while getopts ":c:" option; do
 			exit 1;;
 	esac
 done
-
-if [ $# -eq 0 ]
-	then
-		echo "Invalid: provide git branch"
-		exit 1
-fi
 
 git add -A
 git commit -m "$MESSAGE"
