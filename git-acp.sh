@@ -20,7 +20,7 @@ done
 
 git add -A
 
-git commit -m "$MESSAGE"
+git commit -m ""$MESSAGE""
 echo
 git push origin "$BRANCH"
 
