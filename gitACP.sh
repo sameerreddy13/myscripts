@@ -28,8 +28,9 @@ fi
 
 git add -A
 echo
-echo -e "\e[31mCommitting"
+echo -e "\e[31mCommitting with message:'$MESSAGE'"
 echo
+echo -e "Default \e[42mGreen"
 git commit -m "$MESSAGE"
 echo
 git push origin "$BRANCH"
