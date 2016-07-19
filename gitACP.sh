@@ -28,7 +28,7 @@ fi
 
 git add -A
 echo
-echo "Committing with message:'"$MESSAGE"'"
+echo "Committing with message:'""$MESSAGE""'"
 echo
 git commit -m "$MESSAGE"
 echo
