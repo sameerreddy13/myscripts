@@ -5,10 +5,10 @@
 
 MESSAGE="default"
 read -p "Enter branch name:" BRANCH
+
 while getopts ":c:" option; do
 	case $option in
 	  	c)
-			BRANCH="$3"
 			MESSAGE="$2"
 			;;
 	  	/?)
