@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 #Perform git add, git commit with default message, and git push to argument
 #Use with the -c option to input custom commit message. Example: gitACP -c
