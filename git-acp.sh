@@ -8,6 +8,7 @@
 
 MESSAGE="default"
 BRANCH=$1
+
 # handle option flags
 while getopts ":c" option; do
 	case $option in
