@@ -4,7 +4,7 @@
 #Use with the -c option to input custom commit message. Example: gitACP -c
 
 MESSAGE="default"
-read -p "Enter branch name: " BRANCH
+BRANCH=$1
 
 # handle option flags
 while getopts ":c" option; do
