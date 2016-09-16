@@ -1,7 +1,10 @@
 #!/bin/bash -e
 
-#Perform git add, git commit with default message, and git push to argument
-#Use with the -c option to input custom commit message. Example: gitACP -c
+
+#Perform git add, git commit with default message, and git push to argument.
+#Argument: name of git branch to push to
+#Use with the -c option to input custom commit message. Example: gitACP master -c
+
 
 MESSAGE="default"
 BRANCH=$1
