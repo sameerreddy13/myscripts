@@ -7,7 +7,7 @@
 
 
 MESSAGE="default"
-BRANCH=$1
+BRANCH="hi"
 SUPPRESS=0
 
 # handle option flags
