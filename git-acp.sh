@@ -29,7 +29,7 @@ fi
 
 git add -A
 git commit -m "${MESSAGE}"
-echo
+echo "$BRANCH"
 git push origin "$BRANCH"
 
 exit 0
