@@ -8,13 +8,13 @@
 
 MESSAGE="default"
 BRANCH=$1
-SUPPRESS=false
+SUPPRESS=0
 
 # handle option flags
 while getopts ":s" option; do
 	case $option in
 	  	c)
-            SUPPRESS=true;
+            SUPPRESS=1;
 			;;
 	  	/?)
 	  		echo "Invalid option: -$OPTARG";
@@ -22,7 +22,7 @@ while getopts ":s" option; do
 	esac
 done
 
-if [ "$SUPPRESS" = true ]; then
+if [ "$SUPPRESS" = 0 ]; then
     read -p "Enter commit message: " MESSAGE;
     BRANCH=$2;
 fi
