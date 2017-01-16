@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 
-#Perform git add, git commit with message, and git push to argument.
+#Perform git add, git commit w/ message, and git push to argument.
 #Argument: name of git branch to push to
 #Use with the -s option to suppress custom commit message. Example: git-acp master -c
 
