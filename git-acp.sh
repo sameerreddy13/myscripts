@@ -13,8 +13,9 @@ SUPPRESS=0
 # handle option flags
 while getopts ":s" option; do
 	case $option in
-	  	c)
+	  	s)
             SUPPRESS=1;
+            BRANCH=$2;
 			;;
 	  	/?)
 	  		echo "Invalid option: -$OPTARG";
@@ -24,7 +25,6 @@ done
 
 if [ "$SUPPRESS" = 0 ]; then
     read -p "Enter commit message: " MESSAGE;
-    BRANCH=$2;
 fi
 
 git add -A
