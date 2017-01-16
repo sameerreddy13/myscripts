@@ -1,19 +1,20 @@
 #!/bin/bash -e
 
 
-#Perform git add, git commit with default message, and git push to argument.
+#Perform git add, git commit with message, and git push to argument.
 #Argument: name of git branch to push to
-#Use with the -c option to input custom commit message. Example: gitACP master -c
+#Use with the -s option to suppress custom commit message. Example: git-acp master -c
 
 
 MESSAGE="default"
 BRANCH=$1
+SUPPRESS=false
 
 # handle option flags
-while getopts ":c" option; do
+while getopts ":s" option; do
 	case $option in
 	  	c)
-			read -p "Enter commit message: " MESSAGE
+            SUPPRESS=true;
 			;;
 	  	/?)
 	  		echo "Invalid option: -$OPTARG";
@@ -21,8 +22,12 @@ while getopts ":c" option; do
 	esac
 done
 
-git add -A
+if ["$SUPPRESS" = true] ; then
+    read -p "Enter commit message: " MESSAGE;
+    BRANCH=$2;
+fi
 
+git add -A
 git commit -m "${MESSAGE}"
 echo
 git push origin "$BRANCH"
