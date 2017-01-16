@@ -22,7 +22,7 @@ while getopts ":s" option; do
 	esac
 done
 
-if ["$SUPPRESS" = true] ; then
+if [ "$SUPPRESS" = true ]; then
     read -p "Enter commit message: " MESSAGE;
     BRANCH=$2;
 fi
