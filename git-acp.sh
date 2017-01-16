@@ -23,7 +23,7 @@ while getopts ":s" option; do
 done
 
 if [ "$SUPPRESS" = 0 ]; then
-    read -p "Enter commit ssage: " MESSAGE;
+    read -p "Enter commit message: " MESSAGE;
     BRANCH=$2;
 fi
 
