@@ -7,7 +7,7 @@
 
 
 MESSAGE="default"
-BRANCH="hi"
+BRANCH=$1
 SUPPRESS=0
 
 # handle option flags
@@ -28,7 +28,7 @@ if [ "$SUPPRESS" = 0 ]; then
 fi
 
 git add -A
-echo "$BRANCH"
+echo "asdfasdfasdf"
 git commit -m "${MESSAGE}"
 
 git push origin "$BRANCH"
