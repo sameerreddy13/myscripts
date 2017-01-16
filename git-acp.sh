@@ -28,9 +28,8 @@ if [ "$SUPPRESS" = 0 ]; then
 fi
 
 git add -A
-echo "asdfasdfasdf"
 git commit -m "${MESSAGE}"
-
+echo
 git push origin "$BRANCH"
 
 exit 0
