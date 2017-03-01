@@ -20,7 +20,7 @@ fi
 while getopts ":s" option; do
 	case $option in
 	  	s)
-			if [[ $# -eq 0 ]] ; then
+			if [[ $# -eq 1 ]] ; then
     			echo 'Missing argument: branch'
     			exit 1
 			fi
