@@ -1,14 +1,20 @@
 #!/bin/bash -e
 
 
-#Perform git add, git commit w/ message, and git push to argument.
-#Argument: name of git branch to push to
-#Use with the -s option to suppress custom commit message. Example: git-acp master -c
+# Perform git add, git commit w/ message, and git push to argument.
+# Argument: name of git branch to push to
+# Use with the -s option to suppress custom commit message. Example: git-acp master -s
 
 
 MESSAGE="default"
 BRANCH=$1
 SUPPRESS=0
+
+# argument check
+if [[ $# -eq 0 ]] ; then
+    echo 'Missing argument: branch'
+    exit 1
+fi
 
 # handle option flags
 while getopts ":s" option; do
